@@ -1,6 +1,7 @@
 import numpy as np
+from config import dataset
 
-def markov(length=np.random.randint(30), dataset="dataset.txt"):
+def markov(length=np.random.randint(30), dataset=dataset):
 
     chatbot = open(dataset, encoding='utf8').read().split()
 

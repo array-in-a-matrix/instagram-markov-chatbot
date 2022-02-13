@@ -1,5 +1,7 @@
 {
     "username": "______",
     "password": "______",
-    "recent": 10
+    "dataset": "dataset.txt",
+    "recent": 10,
+    "interval": 600
 }

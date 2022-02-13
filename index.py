@@ -1,5 +1,6 @@
 import sys
 import json
+from config import username, password, recent, interval
 from markov import markov
 from time import sleep
 from numpy.random import randint
@@ -17,14 +18,6 @@ try:
         print("Invalid length given.")
 except IndexError:
     print("No length given.")
-
-
-with open('login.json', 'r') as file:
-    json_object = json.load(file)
-
-username = json_object['username']
-password = json_object['password']
-recent = json_object['recent']
 
 browser = webdriver.Firefox()
 browser.implicitly_wait(5)
@@ -67,6 +60,6 @@ while True:
     browser.find_element(By.CSS_SELECTOR, "[placeholder='Message...']").send_keys(
         message + Keys.ENTER)
 
-    sleep(20)
+    sleep(interval)
 
 browser.close()
