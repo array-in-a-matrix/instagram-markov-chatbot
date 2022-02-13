@@ -59,23 +59,26 @@ sleep(3)
 browser.find_element(By.CSS_SELECTOR, "button.aOOlW:nth-child(2)").click()
 
 # browser.find_element(By.XPATH, "/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[1]/a").click()
+sleep(3)
 
-browser.find_element(By.XPATH, "/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[4]/div/div[2]/div[1]/div/div/div/div").click()
+browser.find_element(By.XPATH, "/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[5]/a").click()
 
 sleep(3)
 
-try:
-    if cmd_length.isdigit():
-        message = markov(int(cmd_length) - 1)
-    else:
+while true:
+    try:
+        cmd_length = sys.argv[1]
+        if cmd_length.isdigit():
+            message = markov(int(cmd_length) - 1)
+        else:
+            message = markov()
+    except IndexError:
         message = markov()
-except IndexError:
-    message = markov()
 
 
-browser.find_element(By.CSS_SELECTOR, "[placeholder='Message...']").send_keys(
-    message + Keys.ENTER)
+    browser.find_element(By.CSS_SELECTOR, "[placeholder='Message...']").send_keys(
+        message + Keys.ENTER)
 
-sleep(3)
+    sleep(10)
 
 browser.close()
