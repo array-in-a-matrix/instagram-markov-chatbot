@@ -37,14 +37,18 @@ sleep(5)
 browser.find_element(By.CSS_SELECTOR, "button.aOOlW:nth-child(2)").click()
 sleep(5)
 
-# browser.find_element(
-#     By.XPATH, "/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[1]/a").click()
-# selects most recent chat                                                                      ^ chat order
 print("started messaging...")
 while True:
     chat = 1 + randint(recent)
     browser.find_element(
         By.XPATH, f"/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[{chat}]").click()
+    # * chat = 1 + randint(recent)
+    # * browser.find_element(
+    # *     By.XPATH, f"/html/body/div[1]/section/div/div[2]/div/div/div[1]/div[2]/div/div/div/div/div[{chat}]").click()
+    # targets most recent nth chats
+
+    # * browser.find_element(By.XPATH, "//*[contains(text(), 'CHAT NAME HERE')]").click()
+    # targets a specific chat
 
     sleep(5)
 
