@@ -3,6 +3,12 @@
 An Instagram chat bot which generates new sentences and sends them in direct messages.
 Used code from [here](https://towardsdatascience.com/simulating-text-with-markov-chains-in-python-1a27e6d13fc6) as a base.
 
+## Dependancy
+    - firefox
+    - python 3
+    - selenium
+    - numpy
+
 ## Configuration
 
 ### JSON

@@ -56,7 +56,7 @@ while True:
         message = markov()
 
     sleep(5)
-
+    print(message)
     browser.find_element(By.CSS_SELECTOR, "[placeholder='Message...']").send_keys(
         message + Keys.ENTER)
 
