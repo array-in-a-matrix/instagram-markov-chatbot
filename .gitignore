@@ -2,3 +2,4 @@ dataset.txt
 __pycache__
 login.json
 geckodriver.log
+ignore
