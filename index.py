@@ -51,9 +51,9 @@ while True:
         if cmd_length.isdigit():
             message = markov(int(cmd_length) - 1)
         else:
-            message = markov()
+            message = markov(np.random.randint(30))
     except IndexError:
-        message = markov()
+        message = markov(np.random.randint(30))
 
     sleep(5)
     print(message)
