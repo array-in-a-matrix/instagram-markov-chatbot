@@ -1,7 +1,7 @@
 # Instagram Markov Chatbot
 
 An Instagram chat bot which generates new sentences and sends them in direct messages.
-Used code from [here](https://towardsdatascience.com/simulating-text-with-markov-chains-in-python-1a27e6d13fc6) as a base.
+Used code from [here](https://towardsdatascience.com/simulating-text-with-markov-chains-in-python-1a27e6d13fc6) as a base. If the dataset is too small the bot will break.
 
 ## Dependancy
     - firefox
@@ -27,6 +27,6 @@ Used code from [here](https://towardsdatascience.com/simulating-text-with-markov
 ### Command-line
 
 - **`headless`**
-    - If you want to run the program headlessly append `MOZ_HEADLESS=1` to the beginning of the command.
+    - If you want to run the program headlessly append `MOZ_HEADLESS=1` to the beginning of the python command.
 - **`message length`**
     - Optional argument (integer) that determine the length of the sentence. If no argument is provided or a non integer number was given, messages will generate with variable length between 1 and 30.
